@@ -1,5 +1,20 @@
 # Machine Learning Classifiers
 
+## Table of Contents
+- [Overview](#overview)
+- [Dataset](#dataset)
+- [Project Workflow](#project-workflow)
+  - [Data Preparation](#1-data-preparation)
+  - [Exploratory Data Analysis (EDA)](#2-exploratory-data-analysis-eda)
+  - [Feature Engineering](#3-feature-engineering)
+  - [Model Implementation](#4-model-implementation)
+  - [Model Evaluation](#5-model-evaluation)
+- [How to Run](#how-to-run)
+- [Results](#results)
+- [Contributing](#contributing)
+
+---
+
 ## Overview
 This project demonstrates the implementation and evaluation of various Machine Learning classification models. It walks through the process of preparing and exploring data, engineering features, and building models to classify data effectively.
 
@@ -16,7 +31,6 @@ The dataset used in this project includes multiple features that describe entiti
 ---
 
 ## Project Workflow
-The project is structured into the following phases:
 
 ### 1. Data Preparation
 - Load and preprocess the dataset.
@@ -34,29 +48,40 @@ The project is structured into the following phases:
 
 ### 4. Model Implementation
 Train and evaluate the following classification models:
-- **Naive Bayes**
-- **Decision Tree**
-- **Random Forest**
-- **AdaBoost**
-- **XGBoost**
 
-Optimize hyperparameters using methods like `GridSearchCV` and `RandomizedSearchCV`.
+   #### Naive Bayes
+A simple yet powerful probabilistic classifier based on Bayes' theorem. It assumes independence between features, which makes it computationally efficient and effective for many applications, especially text classification.
+
+#### Decision Tree
+A tree-structured model where decisions are made at each node based on feature values. It's intuitive and interpretable but prone to overfitting without proper regularization.
+
+#### Random Forest
+An ensemble method that combines multiple decision trees to improve accuracy and reduce overfitting. It achieves better generalization by averaging the predictions of individual trees.
+
+#### AdaBoost
+A boosting algorithm that combines weak learners (e.g., shallow decision trees) iteratively to form a strong learner. It assigns higher weights to misclassified samples, focusing on them in subsequent iterations.
+
+#### XGBoost
+An advanced gradient boosting algorithm known for its speed and accuracy. It uses regularization techniques to prevent overfitting and is widely used in competitions like Kaggle.
 
 ### 5. Model Evaluation
-Evaluate models using metrics such as:
-- Confusion Matrix
-- Precision, Recall, F1-Score
-- Weighted and Macro-Averaged Scores
-- Accuracy
+To assess the performance of classification models, the following metrics are used:
 
-Compare results to identify the best-performing model.
+- **Confusion Matrix**: A summary of prediction results, showing true positives, true negatives, false positives, and false negatives.
+- **Accuracy**: The ratio of correctly predicted observations to the total observations.
+- **Precision**: Measures the proportion of true positives among the predicted positives. High precision indicates fewer false positives.
+- **Recall (Sensitivity)**: Measures the proportion of true positives among the actual positives. High recall indicates fewer false negatives.
+- **F1-Score**: The harmonic mean of precision and recall, providing a single metric that balances both.
+- **Weighted and Macro-Averaged Scores**: Used to handle imbalanced datasets by giving appropriate weight to class sizes or averaging metrics across all classes.
+
+These metrics provide a comprehensive view of model performance and are chosen based on the specific requirements of the task.
 
 ---
 
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Machine_Learning_Classifiers.git
+   git clone https://github.com/Amir-rfz/Machine_Learning_Classifiers.git
    ```
 2. Install the required libraries:
    ```bash
